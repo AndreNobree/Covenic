@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.hero{
+	width: 100%;
+	height: 100vh;
+	background-image: url("./imagens/background.png");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+}
+.logo{
+	width: 100px;
+	cursor: pointer;
+}
+.navbar{
+	width: 85%;
+	height: 15%;
+	margin: auto;
+	display: flex; /*vai "expremer a logo"*/
+	align-items: center; /*ajeitar ela*/
+	justify-content: space-between;/*vai colocar o q ta na msm linha(botão) la na pqp*/
+}
+button{
+	color: #fbfcfd;
+	padding: 10px 25px;/*aumentar as dimensões do botão*/
+	background: transparent;/*deixar o botão transparente*/
+	border: 1px solid #fff;
+	border-radius: 20px;
+	outline: none;
+	cursor: pointer;
+}
+.content{
+	color: #fbfcfd;
+	position: absolute;/*so pra deixar fixo*/
+	top: 50%;
+	left: 8%;
+	transform: translateY(-50%);/*kkk so levantou um pouco*/
+	z-index: 2;
+}
+h1{
+	font-size: 80px;
+	margin: 10px 0 39px;
+	line-height: 80px;/*so alargou mas funciona sem isso*/
+}
+.side-bar{
+	width: 50px;
+	height: 100vh;
+	background: linear-gradient(#00545d, #000729);
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.menu{
+	display: block;
+	width: 25px;
+	margin: 40px auto 0;
+	cursor: pointer;
+}
+.social-links img, .useful-links img{
+	width: 25px;
+	margin: 5px auto;
+	cursor: pointer;
+}
+.social-links{
+	width: 50px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.useful-links{
+	width: 50px;
+	text-align: center;
+	position: absolute;
+	bottom: 30px;
+}
+.bubbles img{
+	width: 50px;
+	animation: bubble 7s linear infinite;/*velocidade das bolas*/
+}
+.bubbles{
+	width: 100%;
+	display: flex;/*as bolas vão passar embaixo das letras*/
+	align-items: center;
+	justify-content: space-around;/*espaço uma da outra(ocupar a tela inteira)*/
+	position: absolute;
+	bottom: -70px; /*via fazer com q as bolas comecem la em baixo*/
+}
+@keyframes bubble{
+	0%{
+		transform: translateY(0vh);/*fazer as bolas subirem*/
+		opacity: 0;
+	}
+	50%{
+	
+		opacity: 1;
+	}
+	70%{
+		
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(-80vh);/*até aonde elas vão*/
+		opacity: 0;
+	}
+}
+.bubbles img:nth-child(1){
+	width: 25px;/*tamanho da bola*/
+	animation-delay: 2s;
+}
+.bubbles img:nth-child(2){
+	animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+	width: 25px;/*tamanho da bola*/
+	animation-delay: 3s;
+}
+.bubbles img:nth-child(4){
+	animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+	animation-delay: 3s;
+}
+.bubbles img:nth-child(6){
+	width: 20px;/*tamanho da bola*/
+	animation-delay: 6s;
+}
+.bubbles img:nth-child(7){
+	width: 35px;/*tamanho da bola*/
+	animation-delay: 7s;
+}
